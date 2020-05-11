@@ -66,7 +66,7 @@ export default class extends SfdxCommand {
     }
     let deployOutput = '';
     if (deltaMeta && deltaMeta.length > 0) {
-      deployOutput += `-p ${deltaMeta.join(',')}`;
+      deployOutput += `-p "${deltaMeta.join(',')}"`;
     } else {
       deployOutput += `-p ${basedir}`;
     }
